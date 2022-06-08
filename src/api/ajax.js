@@ -12,7 +12,7 @@ export default function ajax(url,data={},type='GET') {
        // 准备url query数据参数
        let dataStr = '' // 数据拼接字符串
        Object.keys(data).forEach(key=>{
-         dataStr = dataStr + key + '='+data(key)+'&' // 多了一个&
+         dataStr += key + '=' + data[key] + '&'
        })
        if (dataStr!==''){ // 有可能不传数据
          dataStr = dataStr.substring(0,dataStr.lastIndexOf('&'))

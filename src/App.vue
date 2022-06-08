@@ -7,7 +7,11 @@
 
 <script>
 import Footer from './components/Footer/Footer.vue'
+import {reqFoodTypes} from './api/index'
 export default{
+  mounted(){
+    this.$store.dispatch('getAddress')
+  },
   // 映射成组件标签
   components: {
     Footer
